@@ -97,7 +97,7 @@ func ErrorResponse(w http.ResponseWriter, statusCode int, message string) {
 }
 
 // SuccessResponse sends a JSON response indicating success with a status code, message and data
-func SuccessResponse(w http.ResponseWriter, statusCode int, message string, data interface{}) {
+func SuccessResponse(w http.ResponseWriter, statusCode int, message string, data interface{}) { 
 	w.WriteHeader(statusCode)
 	response := map[string]interface{}{
 		"success": true,
@@ -108,7 +108,3 @@ func SuccessResponse(w http.ResponseWriter, statusCode int, message string, data
 }
 
 
-// Rate Limiting
-// Session Management: Manages user sessions or cookies 
-// Input validation or sanitization to prevent injection attacks
-// Enforcing HTTPS oe other security policies, cross site request forgery (CSRF) protection
